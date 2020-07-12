@@ -1,0 +1,16 @@
+#include <Servo.h>
+
+Servo servo_4;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  servo_4.attach(4);
+
+}
+
+void loop()
+{
+  servo_4.write(map(analogRead(A0), 0, 1023, 0, 180));
+ 
+}
